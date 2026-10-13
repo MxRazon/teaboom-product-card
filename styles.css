@@ -261,3 +261,7 @@ body {
         width: 100%;
     }
 }
+
+::selection{
+    background: #F5D730;
+}
