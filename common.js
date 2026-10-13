@@ -7,16 +7,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     packingButtons.forEach(button => {
         button.addEventListener('click', (e) => {
-            // 1. Снимаем активный класс со всех кнопок и добавляем на текущую
             packingButtons.forEach(btn => btn.classList.remove('active'));
             button.classList.add('active');
 
-            // 2. Получаем данные из data-атрибутов
             const newSku = button.getAttribute('data-sku');
             const newPrice = button.getAttribute('data-price');
             const newOldPrice = button.getAttribute('data-old-price');
 
-            // 3. Обновляем текстовые значения в карточке
             skuElement.textContent = newSku;
             currentPriceElement.textContent = `${newPrice} ₽`;
             
@@ -27,7 +24,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 oldPriceElement.style.display = 'none';
             }
             
-            // Легкий визуальный эффект обратной связи при смене веса
             currentPriceElement.style.animation = 'none';
             setTimeout(() => {
                 currentPriceElement.style.animation = 'fadeIn 0.3s ease-in-out';
@@ -35,7 +31,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Имитация добавления в корзину (интерактив для кнопки)
     buyButton.addEventListener('click', () => {
         const activeWeight = document.querySelector('.packing-btn.active').textContent;
         buyButton.style.background = '#2e7d32';

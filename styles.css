@@ -1,14 +1,13 @@
-/* Переменные и сброс базовых стилей */
 :root {
-    --color-primary: #4caf50;      /* Фирменный зеленый Teaboom */
-    --color-primary-hover: #388e3c;
+    --color-primary: #80BC14;
+    --color-primary-hover: #73A912;
     --color-text-dark: #2c3e50;
     --color-text-muted: #7f8c8d;
     --color-price-old: #95a5a6;
     --color-price-sale: #e74c3c;
     --color-bg-light: #f8f9fa;
     --border-radius: 8px;
-    --transition: all 0.25s ease-in-out;
+    --transition: .25s ease-in-out;
 }
 
 * {
@@ -18,6 +17,8 @@
 }
 
 body {
+    background-color: #fbfbfb;
+    background-image: url(bg.webp);
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     color: var(--color-text-dark);
     background-color: #f4f6f7;
@@ -30,18 +31,16 @@ body {
     margin: 0 auto;
 }
 
-/* Карточка товара (Десктоп 1440px+) */
 .product-card {
-    background: #ffffff;
+    background: #fff;
     border-radius: var(--border-radius);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, .05);
     display: grid;
     grid-template-columns: 1fr 1.2fr;
     gap: 40px;
     padding: 40px;
 }
 
-/* Галерея/Изображение */
 .product-card__gallery {
     position: relative;
     background: var(--color-bg-light);
@@ -61,31 +60,13 @@ body {
     transition: var(--transition);
 }
 
-.product-card__gallery:hover .product-card__image {
-    transform: scale(1.03);
-}
-
-.product-card__badge {
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    background: var(--color-price-sale);
-    color: #fff;
-    padding: 4px 12px;
-    font-size: 0.85rem;
-    font-weight: bold;
-    border-radius: 4px;
-    text-transform: uppercase;
-}
-
-/* Информационный блок */
 .product-card__info {
     display: flex;
     flex-direction: column;
 }
 
 .product-card__breadcrumbs {
-    font-size: 0.85rem;
+    font-size: .85rem;
     color: var(--color-text-muted);
     margin-bottom: 12px;
 }
@@ -109,7 +90,7 @@ body {
 .product-card__meta {
     display: flex;
     gap: 20px;
-    font-size: 0.9rem;
+    font-size: .9rem;
     color: var(--color-text-muted);
     margin-bottom: 20px;
     border-bottom: 1px solid #eee;
@@ -121,7 +102,7 @@ body {
 }
 
 .product-card__description {
-    font-size: 0.95rem;
+    font-size: .95rem;
     color: #555;
     margin-bottom: 25px;
 }
@@ -130,7 +111,6 @@ body {
     margin-bottom: 10px;
 }
 
-/* Блок фасовки */
 .product-card__packing {
     margin-bottom: 30px;
 }
@@ -153,7 +133,7 @@ body {
     background: #fff;
     border: 2px solid #e2e8f0;
     padding: 10px 20px;
-    font-size: 0.95rem;
+    font-size: .95rem;
     font-weight: 600;
     border-radius: 6px;
     cursor: pointer;
@@ -171,7 +151,6 @@ body {
     color: #fff;
 }
 
-/* Зона цены и кнопки купить */
 .product-card__action-zone {
     display: flex;
     align-items: center;
@@ -179,7 +158,7 @@ body {
     background: var(--color-bg-light);
     padding: 20px;
     border-radius: var(--border-radius);
-    margin-top: auto; /* Прижимает к низу при длинном контенте */
+    margin-top: auto;
 }
 
 .product-card__price-box {
@@ -200,7 +179,6 @@ body {
     color: var(--color-text-dark);
 }
 
-/* Кнопка "В корзину" и ее состояния */
 .product-card__buy-btn {
     background: var(--color-primary);
     color: #fff;
@@ -214,27 +192,17 @@ body {
     align-items: center;
     gap: 10px;
     transition: var(--transition);
-    box-shadow: 0 4px 10px rgba(76, 175, 80, 0.2);
+    box-shadow: 0 4px 10px rgba(76, 175, 80, .2);
 }
 
-/* Состояние при наведении (:hover) */
 .product-card__buy-btn:hover {
     background: var(--color-primary-hover);
-    box-shadow: 0 6px 15px rgba(56, 142, 60, 0.3);
-    transform: translateY(-1px);
+    box-shadow: 0 6px 15px rgba(56, 142, 60, .3);
 }
 
-/* Состояние при клике (:active) */
-.product-card__buy-btn:active {
-    transform: translateY(1px);
-}
-
-/* АДАПТИВНОСТЬ */
-
-/* Планшетная версия (tablet: 768px) */
 @media (max-width: 992px) {
     .product-card {
-        grid-template-columns: 1fr; /* Переводим в один столбец */
+        grid-template-columns: 1fr;
         gap: 30px;
         padding: 30px;
     }
@@ -244,7 +212,6 @@ body {
     }
 }
 
-/* Мобильная версия (mobile: 375px) */
 @media (max-width: 480px) {
     body {
         padding: 10px;
@@ -271,7 +238,7 @@ body {
 
     .packing-options {
         display: grid;
-        grid-template-columns: 1fr 1fr; /* Кнопки фасовки 2х2 для удобства тапа пальцем */
+        grid-template-columns: 1fr 1fr;
     }
 
     .product-card__action-zone {
