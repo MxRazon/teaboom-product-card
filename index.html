@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ананасовый улун — Купить в Teaboom.ru</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/ico">
+</head>
+<body>
+
+    <main class="container">
+        <!-- Блок карточки товара -->
+        <article class="product-card">
+            
+            <!-- Левая колонка: Изображение -->
+            <div class="product-card__gallery">
+                <span class="product-card__badge">Скидка!</span>
+                <img src="https://media.teaboom.ru/images/e4bb1618-fb80-41e2-8758-86f884ce095d.jpg" alt="Ананасовый улун" class="product-card__image">
+            </div>
+
+            <!-- Правая колонка: Информация -->
+            <div class="product-card__info">
+                
+                <!-- Хлебные крошки / Категория -->
+                <nav class="product-card__breadcrumbs">
+                    <a href="#">Главная</a> / <a href="#">Каталог</a> / <a href="#">Улун</a>
+                </nav>
+
+                <h1 class="product-card__title">Ананасовый улун</h1>
+                
+                <div class="product-card__meta">
+                    <span class="product-card__sku">Артикул: <strong id="product-sku">01306</strong></span>
+                    <span class="product-card__stock">Наличие: <strong class="in-stock">Много</strong></span>
+                </div>
+
+                <!-- Блок описания товара -->
+                <div class="product-card__description">
+                    <p><strong>Состав:</strong> китайский бирюзовый чай, цукаты, натуральные ароматические масла. Светлый Фуцзяньский улун с ароматом ананаса.</p>
+                    <p>В сухом виде — красивый крупный лист изумрудного цвета, скруткой листа напоминающий Те Гуань Инь. В прогретой посуде аромат свежей, весенней зелени и спелого ананаса.</p>
+                </div>
+
+                <!-- Выбор фасовки -->
+                <div class="product-card__packing">
+                    <span class="packing-title">Выберите фасовку:</span>
+                    <div class="packing-options">
+                        <button class="packing-btn active" data-weight="100" data-sku="01306" data-price="326.40" data-old-price="349.20">100 г</button>
+                        <button class="packing-btn" data-weight="500" data-sku="01307" data-price="1 432" data-old-price="1 646">500 г</button>
+                        <button class="packing-btn" data-weight="1000" data-sku="01308" data-price="2 064" data-old-price="2 592">1000 г</button>
+                        <button class="packing-btn" data-weight="5000" data-sku="01309" data-price="6 320" data-old-price="8 710">5000 г</button>
+                    </div>
+                </div>
+
+                <!-- Цены и кнопка покупки -->
+                <div class="product-card__action-zone">
+                    <div class="product-card__price-box">
+                        <span id="old-price" class="price-old">349,20 ₽</span>
+                        <span id="current-price" class="price-current">326,40 ₽</span>
+                    </div>
+                    
+                    <button class="product-card__buy-btn" aria-label="Добавить Ананасовый улун в корзину">
+                        <svg class="cart-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="9" cy="21" r="1"></circle>
+                            <circle cx="20" cy="21" r="1"></circle>
+                            <path d="Y1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                        </svg>
+                        <span>В корзину</span>
+                    </button>
+                </div>
+
+            </div>
+        </article>
+    </main>
+
+    <script src="common.js"></script>
+</body>
+</html>
